@@ -35,6 +35,15 @@ const userSchema = mongoose.Schema(
       },
       private: true, // used by the toJSON plugin
     },
+    avatar: {
+      type: String,
+      // required: true,
+      trim: true,
+    },
+    refferedBy: {
+      type: mongoose.SchemaTypes.ObjectId,
+      ref: 'User',
+    },
     role: {
       type: String,
       enum: roles,
