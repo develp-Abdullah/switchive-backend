@@ -40,7 +40,7 @@ const userSchema = mongoose.Schema(
       // required: true,
       trim: true,
     },
-    refferedBy: {
+    referredBy: {
       type: mongoose.SchemaTypes.ObjectId,
       ref: 'User',
     },
@@ -52,6 +52,14 @@ const userSchema = mongoose.Schema(
     isEmailVerified: {
       type: Boolean,
       default: false,
+    },
+    referralPoints: {
+      type: Number,
+      default: 0,
+    },
+    loyaltyPoints: {
+      type: Number,
+      default: 0,
     },
   },
   {
